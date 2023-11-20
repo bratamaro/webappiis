@@ -2,4 +2,4 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'filePath'
-    filePath: '../criar-site-iis.ps1'
+    filePath: 'criar-site-iis.ps1'
