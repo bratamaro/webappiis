@@ -1,5 +1,5 @@
 # Criar um diretório para o site
-New-Item -ItemType Directory -Path 'C:\inetpub\wwwroot\WebSite'
+New-Item -ItemType Directory -Path -split 'C:\inetpub\wwwroot\WebSite'
 
 # Criar uma página de exemplo
 @"
@@ -15,4 +15,4 @@ New-Item -ItemType Directory -Path 'C:\inetpub\wwwroot\WebSite'
 "@ | Out-File -FilePath 'C:\inetpub\wwwroot\WebSite\index.htm'
 
 # Criar um site no IIS
-New-WebSite -Name "SiteExemplo" -PhysicalPath 'C:\inetpub\wwwroot\WebSite' -Port 80
+New-WebSite -Name "SiteExemplo" -PhysicalPath -split 'C:\inetpub\wwwroot\WebSite' -Port 80
