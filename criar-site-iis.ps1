@@ -17,5 +17,5 @@ New-Item -ItemType Directory -Path '%SystemDrive%\inetpub\wwwroot\webappiis2'
 "@ | Out-File -FilePath '%SystemDrive%\inetpub\wwwroot\webappiis2\index.html'
 
 # Criar um site no IIS
-#New-WebSite -Name "SiteExemplo" -PhysicalPath 'C:\inetpub\wwwroot\webappiis' -Port 80
-New-WebSite -Name "SiteExemplo" -PhysicalPath '%SystemDrive%\inetpub\wwwroot\webappiis2' -Port 8082
+New-WebSite -Name "SiteExemplo" -PhysicalPath 'C:\inetpub\wwwroot\webappiis2' -Port 8082
+#New-WebSite -Name "SiteExemplo" -PhysicalPath '%SystemDrive%\inetpub\wwwroot\webappiis2' -Port 8082
