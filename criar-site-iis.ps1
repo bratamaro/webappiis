@@ -1,5 +1,5 @@
 # Criar um diretório para o site
-New-Item -ItemType Directory -Path -split 'C:\inetpub\wwwroot\WebSite'
+New-Item -ItemType Directory -Path 'c:\inetpub\wwwroot\WebSite'
 
 # Criar uma página de exemplo
 @"
@@ -12,7 +12,7 @@ New-Item -ItemType Directory -Path -split 'C:\inetpub\wwwroot\WebSite'
     <p>Este é um site de exemplo no IIS criado por um pipeline do Azure DevOps.</p>
 </body>
 </html>
-"@ | Out-File -FilePath 'C:\inetpub\wwwroot\WebSite\index.htm'
+"@ | Out-File -FilePath 'c:\inetpub\wwwroot\WebSite\index.htm'
 
 # Criar um site no IIS
-New-WebSite -Name "SiteExemplo" -PhysicalPath -split 'C:\inetpub\wwwroot\WebSite' -Port 80
+New-WebSite -Name "SiteExemplo" -PhysicalPath 'c:\inetpub\wwwroot\WebSite' -Port 80
